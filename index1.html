@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="appModule" ng-controller="appCtrl">
+    <h4>{{msg}}</h4>
+    <my-dir msg="this is message of isolate  scope">
+    </my-dir>
+
+    <p>Parent scope object name: {{object.name}} and age {{object.age}}</p>
+    <p>{{sentence}}</p>
+    <div my-dir1  object="object" msg="msg">
+    </div>
+    <div my-dir2 sent="sentence=sentence+sent"> <!--function(){ sentence=sentence+"Hello World"} -->
+    </div>
+    <div my-dir3 value="">
+
+    </div>
+
+    <div my-dir4 value="value"></div>
+</body>
+<script src="angular/angular.js"></script>
+<script src="app/app1.js"></script>
+</html>
